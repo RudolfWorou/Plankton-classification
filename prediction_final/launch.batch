@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#SBATCH --job-name=DeepWhale
+#SBATCH --nodes=1
+#SBATCH --partition=gpu_prod_long
+#SBATCH --output=runs/slurm-%j.out
+python3 main.py  test /mounts/Datasets1/ChallengeDeep/test ./logs/ResNet152_224_RS_L2_0/best_model.pt
